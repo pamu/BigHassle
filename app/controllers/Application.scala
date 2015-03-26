@@ -12,7 +12,7 @@ object Application extends Controller {
   }
 
   case class FoodInfo(description: String, special: Option[String] = None)
-  case class SlotInfo(dayNo: Int, slotNo: Int, name: String, startTime: String, span: Int, 
+  case class SlotInfo(slotNo: Int, name: String, startTime: String, span: Int, 
       foodInfo: FoodInfo)
   case class DayInfo(slots: List[SlotInfo])
   case class MenuInfo(days: List[DayInfo])
@@ -23,7 +23,6 @@ object Application extends Controller {
   )(FoodInfo.apply _)
   
   implicit val slotInfoReads: Reads[SlotInfo] = (
-      (JsPath \ "dayNo").read[Int] and
       (JsPath \ "slotNo").read[Int] and
       (JsPath \ "name").read[String] and
       (JsPath \ "startTime").read[String] and
@@ -45,7 +44,6 @@ object Application extends Controller {
   )(unlift(FoodInfo.unapply))
   
   implicit val slotInfoWrites: Writes[SlotInfo] = (
-      (JsPath \ "dayNo").write[Int] and
       (JsPath \ "slotNo").write[Int] and
       (JsPath \ "name").write[String] and
       (JsPath \ "startTime").write[String] and
