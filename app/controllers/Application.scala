@@ -59,19 +59,19 @@ object Application extends Controller {
      (JsPath \ "days").write[List[DayInfo]].contramap[MenuInfo](_.days)
   )
   
-  def slot(day: Int, slot: Int) = Action(parse.json) { implicit request =>
+  def slot(day: Int, slot: Int) = Action { implicit request =>
     import models._
     val info = DAO.menuInfo.days(day).slots(slot)
     Ok(Json.toJson(info))
   }
 
-  def day(day: Int) = Action(parse.json) { implicit request =>
+  def day(day: Int) = Action { implicit request =>
     import models._
     val info = DAO.menuInfo.days(day)
     Ok(Json.toJson(info))
   }
   
-  def menu() = Action(parse.json) { implicit request =>
+  def menu() = Action { implicit request =>
     import models._
     Ok(Json.toJson(DAO.menuInfo))
   }
