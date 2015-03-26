@@ -13,8 +13,7 @@ object Application extends Controller {
   case class DayInfo(slots: List[SlotInfo])
   case class MenuInfo(days: List[DayInfo])
   
-  implicit val foodInfoReads: Reads[FoodInfo] = (
-  )
+  implicit val foodInfoReads: 	
   def slot(day: Int, slot: Int) = Action(parse.json) { implicit request =>
     
     Ok("")
