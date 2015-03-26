@@ -60,15 +60,20 @@ object Application extends Controller {
   )
   
   def slot(day: Int, slot: Int) = Action(parse.json) { implicit request =>
-    Ok("")
+    import models._
+    val info = DAO.menuInfo.days(day).slots(slot)
+    Ok(Json.toJson(info))
   }
 
   def day(day: Int) = Action(parse.json) { implicit request =>
-    Ok("")
+    import models._
+    val info = DAO.menuInfo.days(day)
+    Ok(Json.toJson(info))
   }
   
   def menu() = Action(parse.json) { implicit request =>
-    Ok("")
+    import models._
+    Ok(Json.toJson(DAO.menuInfo))
   }
 
 }
