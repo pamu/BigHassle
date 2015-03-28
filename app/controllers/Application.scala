@@ -66,22 +66,22 @@ object Application extends Controller {
         val info = DAO.menuInfo.days(day).slots(slot)
         Ok(Json.toJson(info))
       } else {
-        BadRequest("slot should be between 0 and 3")
+        BadRequest(Json.obj("msg" -> "slot should be between 0 and 3"))
       }
     } else {
-      BadRequest("day should be between 0 and 6")
+      BadRequest(Json.obj("msg" -> "day should be between 0 and 6"))
     }
     
   }
 
   def day(day: Int) = Action { implicit request =>
     import models._
+    
     if (day >= 0 && day < 7) {
       val info = DAO.menuInfo.days(day)
       Ok(Json.toJson(info))
     } else {
-      import play.api.libs.json.JsValue
-      BadRequest(JsValue("msg" -> "day should be between 0 and 3"))
+      BadRequest(Json.obj("msg" -> "day should be between 0 and 3"))
     }
     
   }
