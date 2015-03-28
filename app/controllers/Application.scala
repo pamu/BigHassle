@@ -61,14 +61,29 @@ object Application extends Controller {
   
   def slot(day: Int, slot: Int) = Action { implicit request =>
     import models._
-    val info = DAO.menuInfo.days(day).slots(slot)
-    Ok(Json.toJson(info))
+    if (day >= 0 && day < 7) {
+      if (slot >= 0 && slot < 4) {
+        val info = DAO.menuInfo.days(day).slots(slot)
+        Ok(Json.toJson(info))
+      } else {
+        BadRequest("slot should be between 0 and 3")
+      }
+    } else {
+      BadRequest("day should be between 0 and 6")
+    }
+    
   }
 
   def day(day: Int) = Action { implicit request =>
     import models._
-    val info = DAO.menuInfo.days(day)
-    Ok(Json.toJson(info))
+    if (day >= 0 && day < 7) {
+      val info = DAO.menuInfo.days(day)
+      Ok(Json.toJson(info))
+    } else {
+      import play.api.libs.json.JsValue
+      BadRequest(JsValue("msg" -> "day should be between 0 and 3"))
+    }
+    
   }
   
   def menu() = Action { implicit request =>
