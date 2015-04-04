@@ -7,7 +7,7 @@ BigHassle is a Play web app which exposes rest end points to **Hassle Mobile App
 Menu in JSON format
 http://bighassle.herokuapp.com/menu
 
-pretified json
+```json
 
 {
    "days":[
@@ -321,329 +321,65 @@ pretified json
       }
    ]
 }
+```
 
 _________________________________________________________________________________________________________________
 
 Day info in JSON format
 http://bighassle.herokuapp.com/day?day=1
 
+```json
 {
-   "days":[
+   "slots":[
       {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
+         "slotNo":0,
+         "name":"breakfast",
+         "startTime":"7:30",
+         "span":2,
+         "foodInfo":{
+            "description":"parata",
+            "special":"Special Punjabi Parata"
+         }
       },
       {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
+         "slotNo":1,
+         "name":"lunch",
+         "startTime":"12:00",
+         "span":2,
+         "foodInfo":{
+            "description":"roti, biryani",
+            "special":"Biryani lunch"
+         }
       },
       {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
+         "slotNo":2,
+         "name":"snack",
+         "startTime":"5:00",
+         "span":1,
+         "foodInfo":{
+            "description":"bread pakida",
+            "special":"Coffee"
+         }
       },
       {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
-      },
-      {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
-      },
-      {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
-      },
-      {
-         "slots":[
-            {
-               "slotNo":0,
-               "name":"breakfast",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"parata",
-                  "special":"Special Punjabi Parata"
-               }
-            },
-            {
-               "slotNo":1,
-               "name":"lunch",
-               "startTime":"12:00",
-               "span":2,
-               "foodInfo":{
-                  "description":"roti, biryani",
-                  "special":"Biryani lunch"
-               }
-            },
-            {
-               "slotNo":2,
-               "name":"snack",
-               "startTime":"5:00",
-               "span":1,
-               "foodInfo":{
-                  "description":"bread pakida",
-                  "special":"Coffee"
-               }
-            },
-            {
-               "slotNo":3,
-               "name":"dinner",
-               "startTime":"7:30",
-               "span":2,
-               "foodInfo":{
-                  "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
-                  "special":"Julaab Jamun"
-               }
-            }
-         ]
+         "slotNo":3,
+         "name":"dinner",
+         "startTime":"7:30",
+         "span":2,
+         "foodInfo":{
+            "description":"rice, roti, dal, brinjal, caroots, kheera and radish splices",
+            "special":"Julaab Jamun"
+         }
       }
    ]
 }
+```
 ____________________________________________________________________________________________________________
 
 Slot info in JSON format
 http://bighassle.herokuapp.com/slot?day=1&&slot=1
 
+```json
 {
    "slotNo":1,
    "name":"lunch",
@@ -654,5 +390,4 @@ http://bighassle.herokuapp.com/slot?day=1&&slot=1
       "special":"Biryani lunch"
    }
 }
-
-
+```
